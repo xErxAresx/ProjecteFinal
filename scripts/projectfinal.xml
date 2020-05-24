@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="projectefinal">
+	<table_structure name="control_taula">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="user_id" Type="bigint(20) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="titulo" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="texto" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="motivo" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fecha" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<key Table="control_taula" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="control_taula" Non_unique="1" Key_name="control_taula_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="control_taula" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="0" Auto_increment="1" Create_time="2020-05-20 14:19:00" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="control_taula">
+	</table_data>
+	<table_structure name="failed_jobs">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="connection" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="queue" Type="text" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="payload" Type="longtext" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="exception" Type="longtext" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="failed_at" Type="timestamp" Null="NO" Key="" Default="current_timestamp()" Extra="" Comment="" />
+		<key Table="failed_jobs" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="failed_jobs" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="1" Create_time="2020-05-20 14:23:52" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="failed_jobs">
+	</table_data>
+	<table_structure name="migrations">
+		<field Field="id" Type="int(10) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="migration" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="batch" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<key Table="migrations" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="7" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="migrations" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="7" Avg_row_length="2340" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="276" Create_time="2020-05-09 15:06:16" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="migrations">
+	<row>
+		<field name="id">257</field>
+		<field name="migration">2020_05_17_143530_create_control_taula_table</field>
+		<field name="batch">2</field>
+	</row>
+	<row>
+		<field name="id">270</field>
+		<field name="migration">2014_10_12_000000_create_users_table</field>
+		<field name="batch">3</field>
+	</row>
+	<row>
+		<field name="id">271</field>
+		<field name="migration">2014_10_12_100000_create_password_resets_table</field>
+		<field name="batch">3</field>
+	</row>
+	<row>
+		<field name="id">272</field>
+		<field name="migration">2019_08_19_000000_create_failed_jobs_table</field>
+		<field name="batch">3</field>
+	</row>
+	<row>
+		<field name="id">273</field>
+		<field name="migration">2020_05_12_090823_create_temas_table</field>
+		<field name="batch">3</field>
+	</row>
+	<row>
+		<field name="id">274</field>
+		<field name="migration">2020_05_14_131934_create_respuestas_table</field>
+		<field name="batch">3</field>
+	</row>
+	<row>
+		<field name="id">275</field>
+		<field name="migration">2020_05_20_141638_create_control_taula_table</field>
+		<field name="batch">3</field>
+	</row>
+	</table_data>
+	<table_structure name="password_resets">
+		<field Field="email" Type="varchar(255)" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="token" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<key Table="password_resets" Non_unique="1" Key_name="password_resets_email_index" Seq_in_index="1" Column_name="email" Collation="A" Cardinality="0" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="password_resets" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="0" Avg_row_length="0" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="0" Create_time="2020-05-20 14:23:52" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="password_resets">
+	</table_data>
+	<table_structure name="respuestas">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="tema_id" Type="bigint(20) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="user_id" Type="bigint(20) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="respuesta" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fecha" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<key Table="respuestas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="6" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="respuestas" Non_unique="1" Key_name="respuestas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="6" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="respuestas" Non_unique="1" Key_name="respuestas_tema_id_foreign" Seq_in_index="1" Column_name="tema_id" Collation="A" Cardinality="6" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="respuestas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="6" Avg_row_length="2730" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="7" Create_time="2020-05-20 14:23:52" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="respuestas">
+	<row>
+		<field name="id">1</field>
+		<field name="tema_id">1</field>
+		<field name="user_id">1</field>
+		<field name="respuesta">Pos esta fino fino filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="tema_id">1</field>
+		<field name="user_id">1</field>
+		<field name="respuesta">Pos EQUISDE DE LA HOSTIA LOCO filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="tema_id">2</field>
+		<field name="user_id">1</field>
+		<field name="respuesta">Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="tema_id">2</field>
+		<field name="user_id">1</field>
+		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="tema_id">3</field>
+		<field name="user_id">2</field>
+		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="tema_id">4</field>
+		<field name="user_id">1</field>
+		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	</table_data>
+	<table_structure name="temas">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="titulo" Type="varchar(255)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="user_id" Type="bigint(20) unsigned" Null="NO" Key="MUL" Extra="" Comment="" />
+		<field Field="texto" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="fecha" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<key Table="temas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="temas" Non_unique="0" Key_name="temas_titulo_unique" Seq_in_index="1" Column_name="titulo" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="temas" Non_unique="1" Key_name="temas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="temas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="4" Avg_row_length="4096" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="5" Create_time="2020-05-20 14:23:52" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="temas">
+	<row>
+		<field name="id">1</field>
+		<field name="titulo">Mount and Blade</field>
+		<field name="user_id">1</field>
+		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="titulo">Mount and Blade 2 lo peta22</field>
+		<field name="user_id">1</field>
+		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="titulo">House flipper lo peta22</field>
+		<field name="user_id">2</field>
+		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="titulo">Nuevo DLC House Flipper</field>
+		<field name="user_id">2</field>
+		<field name="texto">Es la hostia no? que opinais?</field>
+		<field name="fecha">13-05-2020</field>
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	</table_data>
+	<table_structure name="users">
+		<field Field="id" Type="bigint(20) unsigned" Null="NO" Key="PRI" Extra="auto_increment" Comment="" />
+		<field Field="nombre" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="nombreUsuario" Type="varchar(255)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="email" Type="varchar(255)" Null="NO" Key="UNI" Extra="" Comment="" />
+		<field Field="password" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="lvlAdmin" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
+		<field Field="email_verified_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="remember_token" Type="varchar(100)" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+		<key Table="users" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="users" Non_unique="0" Key_name="users_nombreusuario_unique" Seq_in_index="1" Column_name="nombreUsuario" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="users" Non_unique="0" Key_name="users_email_unique" Seq_in_index="1" Column_name="email" Collation="A" Cardinality="2" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="users" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="2" Avg_row_length="8192" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="3" Create_time="2020-05-12 08:35:39" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+	</table_structure>
+	<table_data name="users">
+	<row>
+		<field name="id">1</field>
+		<field name="nombre">Arnaldo</field>
+		<field name="nombreUsuario">xErxAresx</field>
+		<field name="email">arnaulopez26@gmail.com</field>
+		<field name="password">$2y$10$FbpQufnOIB14zD/uXPKqruJuNecgBnKgbnxwJEYwqoW/svOBwbXkm</field>
+		<field name="lvlAdmin">2</field>
+		<field name="email_verified_at" xsi:nil="true" />
+		<field name="remember_token" xsi:nil="true" />
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="nombre">Noa</field>
+		<field name="nombreUsuario">SuishBish</field>
+		<field name="email">moavinyales@gmail.com</field>
+		<field name="password">$2y$10$0G0Hg5oTTmGS3VEbR1Eql.Sw4Y5KswBFvqi.H3l.wToOifH7L576q</field>
+		<field name="lvlAdmin">1</field>
+		<field name="email_verified_at" xsi:nil="true" />
+		<field name="remember_token" xsi:nil="true" />
+		<field name="created_at">2020-05-21 14:38:06</field>
+		<field name="updated_at">2020-05-21 14:38:06</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

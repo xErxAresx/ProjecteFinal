@@ -1,0 +1,29 @@
+#miRow {
+    max-width: 1000px;
+    justify-content: center;
+    margin: 1em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.tituloTabla {
+    width: 25%;
+}
+
+.textoTabla {
+    width: 60%;
+}
+
+.autorfechaTabla {
+    width: 15%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}

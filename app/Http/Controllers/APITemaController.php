@@ -14,9 +14,8 @@ class APITemaController extends Controller
 
     public function userTemas($id) {
 
-        $data = Tema::all();
-        $data = $data->where('user_id', '=', $id);
-        return response()->json($data);
+        $data = Tema::paginate(5)->where('user_id', $id)->get();
+        return response()->json($data, 200);
     }
 
     public function show($id)

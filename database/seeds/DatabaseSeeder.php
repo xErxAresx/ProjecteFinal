@@ -23,15 +23,33 @@ class DatabaseSeeder extends Seeder
 			'fecha' => '13-05-2020'
 		),
 		array(
-			'titulo' => 'House flipper lo peta22',
+			'titulo' => 'House4124 flipper lo peta22',
 			'user_id' => '2', 
 			'texto' => 'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?', 
 			'fecha' => '13-05-2020'
 		),
 		array(
-			'titulo' => 'Nuevo DLC House Flipper',
+			'titulo' => 'Nuevo4123124 DLC House Flipper',
 			'user_id' => '2', 
 			'texto' => 'Es la hostia no? que opinais?', 
+			'fecha' => '13-05-2020'
+		),
+		array(
+			'titulo' => 'Nuevo4124124 DLC House Flipper',
+			'user_id' => '4', 
+			'texto' => 'Es la hostia no? que opinais?', 
+			'fecha' => '13-05-2020'
+		),
+		array(
+			'titulo' => 'Viejo DLC House Flipper',
+			'user_id' => '3', 
+			'texto' => 'Es la hostia no? que opinais?', 
+			'fecha' => '13-05-2020'
+		),
+		array(
+			'titulo' => 'Que paisha peña',
+			'user_id' => '4', 
+			'texto' => 'JEJEEEEEEEEEEEEEEEEEEEE', 
 			'fecha' => '13-05-2020'
 		)
 	);
@@ -57,7 +75,7 @@ class DatabaseSeeder extends Seeder
 		),
 		array(
 			'tema_id' => '2',
-			'user_id' => '1',
+			'user_id' => '2',
 			'respuesta' => 'Pero que muchisimo mejor LOCO filipino loco',
 			'fecha' => '13-05-2020'
 		),
@@ -68,8 +86,26 @@ class DatabaseSeeder extends Seeder
 			'fecha' => '13-05-2020'
 		),
 		array(
+			'tema_id' => '3',
+			'user_id' => '4',
+			'respuesta' => 'Pero que muchisimo mejor LOCO filipino loco',
+			'fecha' => '13-05-2020'
+		),
+		array(
 			'tema_id' => '4',
-			'user_id' => '1',
+			'user_id' => '3',
+			'respuesta' => 'Pero que muchisimo mejor LOCO filipino loco',
+			'fecha' => '13-05-2020'
+		),
+		array(
+			'tema_id' => '2',
+			'user_id' => '3',
+			'respuesta' => 'Pero que muchisimo mejor LOCO filipino loco',
+			'fecha' => '13-05-2020'
+		),
+		array(
+			'tema_id' => '1',
+			'user_id' => '4',
 			'respuesta' => 'Pero que muchisimo mejor LOCO filipino loco',
 			'fecha' => '13-05-2020'
 		)
@@ -123,6 +159,22 @@ class DatabaseSeeder extends Seeder
 		$u->email = "moavinyales@gmail.com";
 		$u->password = bcrypt("04112018");
 		$u->lvlAdmin = "1";
+		$u->save();
+
+		$u = new User;
+        $u->nombre = "Dima";
+        $u->nombreUsuario = "LemonBF";
+		$u->email = "dmeters@gmail.com";
+		$u->password = bcrypt("dawmola2");
+		$u->lvlAdmin = "1";
+		$u->save();
+
+		$u = new User;
+        $u->nombre = "Hahaha";
+        $u->nombreUsuario = "Jejeje";
+		$u->email = "jajajas@gmail.com";
+		$u->password = bcrypt("dawmola2");
+		$u->lvlAdmin = "2";
 		$u->save();
 	}
     /**

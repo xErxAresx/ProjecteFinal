@@ -7,60 +7,85 @@
                 <h2>Temas Actuales</h2>
             </div>
         </div>
-        <table class="table">
-        <thead>
-            <tr>
+        <div id="example1">
+        </div>
 
-                <th class="tituloTabla" colspan="1">Tiutlo</th>
-
-                <th class="textoTabla">Cuerpo</th>
-                <th></th>
-                <th></th>
-                <th class="autorfechaTabla">Autor y fecha</th>
-
-            </tr>
-        </thead>
-
-        <tbody>
-        @if ($temas!=null)
-        @foreach( $temas as $tema )
-        <tr>
-            <td ><a href="{{ url('/foro/mostrar/' . $tema->id ) }}">{{ $tema->titulo }}</a></td>
-
-            <td colspan="3">
-                {{$tema->texto}}
-                @if (Auth::check())
-                    @if (Auth::user()->lvlAdmin >= 2)
-                        <form method="GET" action=" {{ url('/foro/ '.$tema->id.'/eliminarTema')}}">
-                            <button id="botonEditRespuesta" type="submit" class="btn btn-warning">
-                                    Eliminar
-                                </button>
-                        </form>
-                             
-                    @endif
-                @endif
-                    
-            </td>
-
-            <td >
-                @foreach ($users as $user)
-                    @if ($user->id == $tema->user_id)
-                        <a href="{{ url('/foro/perfil/'.$user->id)}}"> {{$user->nombreUsuario}} 
-                    @endif
-                @endforeach
-            <br>   
-            {{$tema->fecha}}
-            </td>
-
-        </tr>
-    @endforeach
-    @else
-        <p>Lo siento pero actualmente no hay infomación</p>
-    @endif
-        
-        </tbody>
-
-    </table>
+<script type="text/babel">
+        class ListComponent2 extends React.Component {
+            constructor() {
+                super()
+                this.state = { animus: [] }
+            }
     
+            componentDidMount() {
+                var myRequest = new Request("http://localhost:8000/api/temas");
+                let animus = [];
+    
+                fetch(myRequest)
+                    .then(response => response.json())
+                    .then(data => {
+                        this.setState({ animus: data })
+                    })
+            }
+    
+            render() {
+                var id = window.App
+                return (
+                  <table class="table">
+                  <thead>
+                      <tr>
+          
+                          <th class="tituloTabla" colspan="1">Titulo</th>
+          
+                          <th class="textoTabla">Tema</th>
+                          <th></th>
+                          <th></th>
+                          <th class="autorfechaTabla">Fecha</th>
+          
+                      </tr>
+                  </thead>
+          
+                  <tbody>
+                      
+                    {this.state.animus.map(animu => {
+                        var id = animu.id;
+                        var ruta = "/foro/mostrar/"+id;
+                        var ruta2 = "/foro/perfil/";
+                        var users = window.App.users;
+                        var nombreUser = "";
+                        for (let i = 0; i < users.length; i++) {
+                            if (animu.user_id == users[i].id) {
+                                nombreUser = users[i].nombreUsuario;
+                                ruta2 = ruta2+users[i].id;
+                            } 
+                        }
+                      return(
+                        <tr>
+                        <td key={`animu-${animu.id}`}>
+                        <a href={ruta} >{animu.titulo}</a>
+                        </td>
+                        <td colspan="3">
+                          {animu.texto}
+                        </td>
+                        <td>
+                          <a href={ruta2}> {nombreUser}</a> / {animu.fecha}
+                        </td>
+                      </tr>
+                      )
+                                    
+                            })}
+                  
+                
+                  </tbody>
+              </table>
+                  
+                )
+            }
+        }
+        ReactDOM.render(
+            <ListComponent2 />,
+            document.getElementById('example1')
+        );
+    </script>
     
 @stop

@@ -14,9 +14,8 @@ class APIRespuestaController extends Controller
 
     public function userRespuestas($id) {
         
-        $data = Respuesta::all();
-        $data = $data->where('user_id', '=', $id);
-        return response()->json($data);
+        $data = Respuesta::where('user_id', $id)->get();
+        return response()->json($data, 200);
     }
 
     public function show($id)

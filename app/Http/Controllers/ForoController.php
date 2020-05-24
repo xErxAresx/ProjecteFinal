@@ -38,11 +38,6 @@ class ForoController extends Controller
     public function getPerfil($id) {
 
         $user = User::findOrFail($id);
-        //$temas = Tema::all();
-        //$temas = $temas->where('user_id', '=', $id);
-        //$respuestas = Respuesta::all();
-        //$respuestas = $respuestas->where('user_id', '=', $id);
-       // $todo = Arr::collapse([$user,$temas]);
         return view('perfil.perfil', array('user' => $user));
     }
 

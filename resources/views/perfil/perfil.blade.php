@@ -88,26 +88,9 @@
                 <hr>
             </div>
         </div>
-        <table class="table">
-          <thead>
-              <tr>
-  
-                  <th class="tituloTabla" colspan="1">Tema</th>
-  
-                  <th class="textoTabla">Respuesta</th>
-                  <th></th>
-                  <th></th>
-                  <th class="autorfechaTabla">Fecha</th>
-  
-              </tr>
-          </thead>
-          @if (Auth::check())
+        <div id="example2">
           
-        @endif
-          <tbody id="example2">
-        
-          </tbody>
-      </table>
+        </div>
       
     </div>
 </div>
@@ -129,8 +112,6 @@
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ animus: data })
-                    console.log(data);
-                    console.log(animus);
                 })
         }
 
@@ -179,6 +160,70 @@
     ReactDOM.render(
         <ListComponent />,
         document.getElementById('example1')
+    );
+
+    class ListComponent2 extends React.Component {
+        constructor() {
+            super()
+            this.state = { animus: [] }
+        }
+
+        componentDidMount() {
+            var myRequest = new Request("http://localhost:8000/api/respuestas/user/"+window.App.user.id);
+            let animus = [];
+
+            fetch(myRequest)
+                .then(response => response.json())
+                .then(data => {
+                    this.setState({ animus: data })
+                    console.log(data);
+                    console.log(animus);
+                })
+        }
+
+        render() {
+            return (
+              <table class="table">
+              <thead>
+                  <tr>
+                      <th class="tituloTabla" colspan="1">Link Tema</th>
+                      <th class="textoTabla">Respuesta</th>
+                      <th></th>
+                      <th></th>
+                      <th class="autorfechaTabla">Fecha</th>
+      
+                  </tr>
+              </thead>
+      
+              <tbody>
+                  
+                {this.state.animus.map(animu => {
+                  return(
+                    <tr>
+                    <td key={`animu-${animu.id}`}>
+                      <a>{animu.tema_id.titulo}</a>
+                    </td>
+                    <td colspan="3">
+                      {animu.respuesta}
+                    </td>
+                    <td>
+                      {window.App.user.nombreUsuario} / {animu.fecha}
+                    </td>
+                  </tr>
+                  )
+                                
+                        })}
+              
+            
+              </tbody>
+          </table>
+              
+            )
+        }
+    }
+    ReactDOM.render(
+        <ListComponent2 />,
+        document.getElementById('example2')
     );
 </script>
 

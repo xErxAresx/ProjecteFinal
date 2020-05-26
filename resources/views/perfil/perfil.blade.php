@@ -9,8 +9,13 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Tu perfil</h4>
-                    <hr>
+                    @if (Auth::check() && Auth::user()->id == $user->id)
+                  <h4>Tu perfil</h4>
+                  <hr>
+                  @else
+                  <h4>Su perfil</h4>
+                  <hr>
+                  @endif
                 </div>
             </div>
             <div class="row">
@@ -20,10 +25,7 @@
                         <label for="username" class="col-4 col-form-label">Nombre</label> 
                         <div class="col-8">
                         <input id="nombre" name="username" placeholder="{{$user->nombre}}" class="form-control here" required="required" type="text" disabled>
-                      
-                        @for ($i = 0 ; $i < 100; ++$i)
-                      
-                        @endfor
+
                         </div>
                       </div>
                       <div class="form-group row">
@@ -48,10 +50,8 @@
                         </div>
                       </form>
                       @endif
-                      
                 </div>
             </div>
-            
         </div>
     </div>
     <div class="card">
@@ -59,7 +59,7 @@
           <div class="row">
               <div class="col-md-12">
                 
-                  @if (Auth::check() && Auth::user()->id)
+                  @if (Auth::check() && Auth::user()->id == $user->id)
                   <h4>Tus temas</h4>
                   <hr>
                   @else
@@ -84,8 +84,13 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <h4>Tus respuestas</h4>
-                <hr>
+                @if (Auth::check() && Auth::user()->id == $user->id)
+                  <h4>Tus respuestas</h4>
+                  <hr>
+                  @else
+                  <h4>Sus respuestas</h4>
+                  <hr>
+                  @endif
             </div>
         </div>
         <div id="example2">
@@ -103,37 +108,38 @@
             super()
             this.state = { animus: [] }
         }
-
+        //Quan el component es munta fem una request a la api i agafem tots els temas de l'usuari
         componentDidMount() {
-            var myRequest = new Request("http://localhost:8000/api/temas/user/"+window.App.user.id);
+            var myRequest = new Request("http://localhost:8000/api/temas/user/"+window.App.user.id); //La variable window.App.user.id es una variable global transformada a json
             let animus = [];
-
+            //Agafem tota la informació
             fetch(myRequest)
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ animus: data })
                 })
         }
-
+        //En el render posarem el que per aixi dir-ho retornarem
         render() {
             return (
+              //Creem l'estructura que plasmara en el nostre HTML
               <table class="table">
               <thead>
                   <tr>
-      
+
                       <th class="tituloTabla" colspan="1">Titulo</th>
-      
                       <th class="textoTabla">Tema</th>
                       <th></th>
                       <th></th>
                       <th class="autorfechaTabla">Fecha</th>
-      
+
                   </tr>
               </thead>
-      
               <tbody>
-                  
+                
                 {this.state.animus.map(animu => {
+                  //map es la funció igualitaria a foreach en React
+                  //Mostrem l'informació que necessitem
                   return(
                     <tr>
                     <td key={`animu-${animu.id}`}>
@@ -146,22 +152,21 @@
                       {window.App.user.nombreUsuario} / {animu.fecha}
                     </td>
                   </tr>
-                  )
-                                
-                        })}
-              
-            
+                  )            
+                })}
               </tbody>
           </table>
               
             )
         }
     }
+    //Mitjançant DOM agafem i mostrem l'informació agafant l'id de l'element
     ReactDOM.render(
         <ListComponent />,
         document.getElementById('example1')
     );
 
+    //Es el que l'anterior pero per les respostes
     class ListComponent2 extends React.Component {
         constructor() {
             super()
@@ -176,13 +181,12 @@
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ animus: data })
-                    console.log(data);
-                    console.log(animus);
                 })
         }
 
         render() {
             return (
+
               <table class="table">
               <thead>
                   <tr>
@@ -198,10 +202,11 @@
               <tbody>
                   
                 {this.state.animus.map(animu => {
+                  var rutaMostrar = "/foro/mostrar/"+animu.tema_id;
                   return(
                     <tr>
                     <td key={`animu-${animu.id}`}>
-                      <a>{animu.tema_id.titulo}</a>
+                      <a href={rutaMostrar}>Link</a>
                     </td>
                     <td colspan="3">
                       {animu.respuesta}

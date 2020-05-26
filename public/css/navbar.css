@@ -6,8 +6,27 @@
     color: rgb(231, 231, 59);
 }
 
-#linkLogo {}
-
 a {
     color: white;
+}
+
+#button {
+    justify-content: center;
+}
+
+li {
+    text-align: center;
+    display: inline;
+    min-width: 110px;
+    margin: 0.5em;
+    max-width: 120px;
+    justify-content: center;
+    max-height: 33px;
+}
+
+#cerrarSesion {
+    color: white;
+    position: relative;
+    bottom: 9px;
+    right: 9px;
 }

@@ -16,9 +16,17 @@ class ForoController extends Controller
     //Funcion que retorna todos los temas del foro
     public function getIndex() 
     {
-        $temas=Tema::all();
+        $temas=Tema::paginate(5);
         $users=User::all();
         return view('home.foro', array('temas'=> $temas), array('users' => $users));
+    }
+
+    //Funcion que retorna los temas que busque el usuario en el search bar
+    public function buscar(Request $request) 
+    {
+        $nombre=$request->get('tema');
+        $temas = Tema::where('titulo', 'like', '%'.$nombre.'%')->paginate(5);
+        return view('foro.foro', array('temas'=> $tema));
     }
 
     //Funcion que retorna el formulario para crear un tema nuevo
@@ -76,16 +84,16 @@ class ForoController extends Controller
     }
 
     //Funcio per editar una resposta
-    public function putEditRespuesta($id) {
+   /* public function putEditRespuesta($id) {
 
         $user = Auth::user();
         $respuesta = Respuesta::all();
-    }
+    }*/
 
     //Funcion para retornar el formulario del edit de una respuesta
-    public function getEditRespuesta($idTema,$idRespuesta) {
+   /* public function getEditRespuesta($idTema,$idRespuesta) {
         
-    }
+    }*/
 
     //Funcion para editar una respuesta echa por el mismo usuario
     //public function editRespuesta($id)
@@ -108,13 +116,13 @@ class ForoController extends Controller
     public function getDeleteTema($id){
 
         $tema = Tema::findOrFail($id);
-        return view('home.eliminarTema', array('tema'=>$tema));
+        return view('temas.eliminarTema', array('tema'=>$tema));
     }
 
     public function update() {
 
     }
-
+    //Función que destruye un tema y guarda los datos del usuario que ha realizado l'accion en una tabla de control
     public function destroy(Request $request, $id) {
 
         $fecha = date('d-m-Y');

@@ -33,7 +33,7 @@
           @endif
             @endif
             </td>
-            <td style="justify-content:center;text-align:center; colspan="2">{{$respuesta->user->nombreUsuario}} / {{$respuesta->fecha}}</td>
+          <td style="justify-content:center;text-align:center; colspan="2"><a href={{ url('/foro/perfil/'.$respuesta->user->id)}}>{{$respuesta->user->nombreUsuario}}</a> / {{$respuesta->fecha}}</td>
           </tr>
           @endif
 
@@ -42,11 +42,14 @@
         </tbody>
         </table>
     </div>
+    @if (Auth::check())
     <div class="col">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                <span class="glyphicon glyphicon-plus"> </span> Añadir respuesta
-            </button>
-        </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <span class="glyphicon glyphicon-plus"> </span> Añadir respuesta
+      </button>
+  </div>
+    @endif
+    
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

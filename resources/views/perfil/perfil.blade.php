@@ -45,7 +45,7 @@
                       <form method="get" action="{{ url('/foro/perfil/'.Auth::user()->id.'/edit') }}">
                         <div class="form-group row">
                           <div class="offset-4 col-8">
-                            <button name="submit" type="submit" class="btn btn-primary">Editar tu perfil</button>
+                            <button id="botonEditarPerfil" name="submit" type="submit" class="btn btn-primary">Editar tu perfil</button>
                           </div>
                         </div>
                       </form>

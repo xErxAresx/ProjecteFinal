@@ -38,13 +38,13 @@
           @endif
 
         @endforeach
-            
+            {{$respuestas->links()}}
         </tbody>
         </table>
     </div>
     @if (Auth::check())
     <div class="col">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      <button id="botonRespuesta" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           <span class="glyphicon glyphicon-plus"> </span> Añadir respuesta
       </button>
   </div>
@@ -63,9 +63,10 @@
             </div>
             <div class="modal-body">
               <form method="POST" action=" {{ url ('/foro/mostrar/'.$tema->id.'/crearRespuesta')}} ">
+                {{ csrf_field() }}
                   <div class="form-group">
                       <label for="synopsis">Pregunta</label>
-                      <p name="pregunta" id="texto" class="form-control" rows="3"> {{$tema->texto}} </p>
+                      <p name="pregunta" class="form-control" rows="3"> {{$tema->texto}} </p>
                    </div>
                    <div class="form-group">
                       <label for="synopsis">Respuesta</label>
@@ -78,7 +79,7 @@
                    </div>
     
                    <div class="form-group text-center">
-                      <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
+                      <button id="añadirRes" type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
                          Añadir respuesta
                       </button>
                    </div>

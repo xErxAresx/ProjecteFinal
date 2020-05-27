@@ -156,7 +156,7 @@ class DatabaseSeeder extends Seeder
 		$u = new User;
         $u->nombre = "Noa";
         $u->nombreUsuario = "SuishBish";
-		$u->email = "moavinyales@gmail.com";
+		$u->email = "noavinyales@gmail.com";
 		$u->password = bcrypt("04112018");
 		$u->lvlAdmin = "1";
 		$u->save();

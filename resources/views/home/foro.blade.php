@@ -22,7 +22,7 @@
                         @foreach ($temas as $tema)
                         <tr>
                             <td >
-                                <a href={{url('/foro/mostrar/'.$tema->id)}} >{{$tema->titulo}}</a>
+                            <a id="{{'tema'.$tema->id}}" href={{url('/foro/mostrar/'.$tema->id)}} >{{$tema->titulo}}</a>
                             </td>
                             <td colspan="3">
                                 {{$tema->texto}}
@@ -33,7 +33,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href={{url('/foro/perfil/'.$tema->user_id)}}> {{$tema->user->nombreUsuario}}</a> / {{$tema->fecha}}
+                            <a id="user{{$tema->user->id}}" href={{url('/foro/perfil/'.$tema->user_id)}}> {{$tema->user->nombreUsuario}}</a> / {{$tema->fecha}}
                             </td>
                         </tr>
                         @endforeach

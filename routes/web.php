@@ -24,7 +24,7 @@ Route::get('/foro/{id}/eliminarTema', 'ForoController@getDeleteTema')->middlewar
 Route::put('/foro/{id}/eliminarTema', 'ForoController@destroy')->middleware('auth');  //Ruta que destruye un tema
 
 //Buscador
-Route::get('/foro/buscar','ForoController@buscar')->middleware('auth'); //Ruta de la busqueda
+Route::post('/foro/buscar/','ForoController@buscar')->middleware('auth'); //Ruta de la busqueda
 
 
 //Usuario

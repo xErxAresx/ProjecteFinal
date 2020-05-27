@@ -6,9 +6,9 @@
     @if (Auth::check())
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul id=”button”>
-            <li class="btn btn-secondary"><a href="{{ url('/foro') }}" style="color:white;">Foro</a></li>
-            <li class="btn btn-secondary"><a href="{{ url('/foro/crearTema') }}" style="color:white;">Añadir Tema</a></li>
-            <li class="btn btn-secondary"><a href="{{ url('/foro/perfil/'. Auth::user()->id ) }}" style="color:white;">Perfil</a></li>
+            <li class="btn btn-secondary"><a id="botonForo" href="{{ url('/foro') }}" style="color:white;">Foro</a></li>
+            <li class="btn btn-secondary"><a id="botonCrear" href="{{ url('/foro/crearTema') }}" style="color:white;">Añadir Tema</a></li>
+            <li class="btn btn-secondary"><a id="botonPerfil" href="{{ url('/foro/perfil/'. Auth::user()->id ) }}" style="color:white;">Perfil</a></li>
             <li class="btn btn-secondary">
                 <form action="{{ url('/logout') }}" method="POST" style="display:inline;" id="formSesion">
                     {{ csrf_field() }}
@@ -17,7 +17,7 @@
                     </button>
                 </form>
             </li>
-            <form method="GET" action="{{url('/foro/buscar')}}" style="float:right;" class="form-inline my-2 my-lg-0">
+            <form method="POST" action="{{url('/foro/buscar')}}" style="float:right;" class="form-inline my-2 my-lg-0">
                 <input name="tema" style="margin-top:8px;" class="form-control mr-sm-2" type="search" placeholder="Buscar Tema">
                 <button style="margin-top:10px;" class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
@@ -26,14 +26,14 @@
     @else
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul id=”button”>
-            <li class="btn btn-secondary"><a href="{{ url('/foro') }}" style="color:white;">Foro</a></li>
-            <li class="btn btn-secondary"><a href="{{ url('/login') }}" style="color:white;">Iniciar Sesión</a></li>
-            <li class="btn btn-secondary"><a href="{{ url('/register') }}" style="color:white;">Registrarse</a></li>
+            <li class="btn btn-secondary"><a id="botonForo" href="{{ url('/foro') }}" style="color:white;">Foro</a></li>
+            <li class="btn btn-secondary"><a id="botonIniciar" href="{{ url('/login') }}" style="color:white;">Iniciar Sesión</a></li>
+            <li class="btn btn-secondary"><a id="registrarse" href="{{ url('/register') }}" style="color:white;">Registrarse</a></li>
         </ul>
     </div>
     @endif
 </nav>
-<!-- Pruebas 
+<!-- Antiguo NavBar
 
     NavBar Con LogIn
 <div class="collapse navbar-collapse" id="navbarSupportedContent">

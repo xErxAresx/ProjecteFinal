@@ -21,26 +21,26 @@
                       <div class="form-group row">
                         <label for="username" class="col-4 col-form-label">Nombre actual: {{$user->nombre}}</label> 
                         <div class="col-8">
-                        <input id="nombre" name="nombre" class="form-control here" required="required" type="text" >
+                        <input id="perfilNombre" id="nombre" name="nombre" class="form-control here" required="required" type="text" >
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="name" class="col-4 col-form-label">Nombre de Usuario actual: {{$user->nombreUsuario}}</label> 
                         <div class="col-8">
-                          <input id="nombreUsuario" name="nombreUsuario"  class="form-control here" type="text" >
+                          <input id="perfilNombreU" id="nombreUsuario" name="nombreUsuario"  class="form-control here" type="text" >
                         </div>
                       </div>
           
                       <div class="form-group row">
                         <label for="email" class="col-4 col-form-label">Email actual: {{$user->email}}</label> 
                         <div class="col-8">
-                          <input id="email" name="email" class="form-control here" required="required" type="text" >
+                          <input id="perfilEmail" id="email" name="email" class="form-control here" required="required" type="text" >
                         </div>
                       </div>
                       
                       <div class="form-group row">
                         <div class="offset-4 col-8">
-                          <button name="submit" type="submit" class="btn btn-primary">Editar</button>
+                          <button id="editarPerfil" name="submit" type="submit" class="btn btn-primary">Editar</button>
                         </div>
                       </div>
                     </form>

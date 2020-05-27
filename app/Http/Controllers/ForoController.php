@@ -26,7 +26,7 @@ class ForoController extends Controller
     {
         $nombre=$request->get('tema');
         $temas = Tema::where('titulo', 'like', '%'.$nombre.'%')->paginate(5);
-        return view('foro.foro', array('temas'=> $tema));
+        return view('home.foro', array('temas'=> $temas));
     }
 
     //Funcion que retorna el formulario para crear un tema nuevo
@@ -38,7 +38,7 @@ class ForoController extends Controller
     public function showTema($id) {
         
         $tema=Tema::findOrFail($id);
-        $respuestas=Respuesta::all();
+        $respuestas=Respuesta::where('tema_id','=',$id)->paginate(10);
         return view('temas.mostrarTema', array('tema'=>$tema), array('respuestas'=>$respuestas));
     }
 
@@ -69,16 +69,16 @@ class ForoController extends Controller
     }
 
     //Funcion que crear una nueva respuesta
-    public function createRespuesta($id) {
-        $user = auth()->user()->id;
-        $iduser = Auth::id();
+    public function createRespuesta(Request $request, $id) {
+        $iduser = Auth::user()->id;
         $fecha = date('d-m-Y');
-        Respuesta::create([
-            'tema_id' => $id,
-            'user_id' => $iduser,
-            'respuesta' => $request['respuesta'],
-            'fecha' => $fecha
-        ]);
+
+        $respuesta = new Respuesta;
+        $respuesta->tema_id = $id;
+        $respuesta->user_id = $iduser;
+        $respuesta->respuesta = $request['texto'];
+        $respuesta->fecha = $fecha;
+        $respuesta->save();
 
         return redirect('/foro/mostrar/'.$id);
     }

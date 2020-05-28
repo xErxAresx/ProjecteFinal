@@ -12,11 +12,11 @@ a {
 
 #button {
     justify-content: center;
+    list-style: none;
 }
 
-li {
+.botonNavbar {
     text-align: center;
-    display: inline;
     min-width: 110px;
     margin: 0.5em;
     max-width: 120px;

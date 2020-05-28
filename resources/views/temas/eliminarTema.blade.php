@@ -29,7 +29,7 @@
                             </li>
                             <li>
                                 <input type="radio" id="Otro" name="motivo" value="Otro">Otro
-                                <textarea></textarea>
+                                <textarea id="otroMotivo" name="otroMotivo"></textarea>
                             </li>
                       </ul>
                    </div>

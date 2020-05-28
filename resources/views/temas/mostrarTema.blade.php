@@ -12,7 +12,6 @@
         <thead>
             <tr>
 
-
                 <th colspan="4" class="textoTabla">{{$tema->texto}}</th>
                 <th colspan="2" style="justify-content:center;text-align:center;" class="autorfechaTabla">{{$tema->user->nombreUsuario}} / {{$tema->fecha}}</th>
 

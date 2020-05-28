@@ -132,6 +132,9 @@ class ForoController extends Controller
         $titulo = $tema->titulo;
         $texto = $tema->texto;
         $motivo = $request['motivo'];
+        if($motivo=="Otro") {
+            $motivo = $request['otroMotivo'];
+        }
         $data=array('user_id'=>$user_id, 'titulo'=>$titulo, 'texto'=>$texto, 'motivo'=>$motivo, 'fecha'=>$fecha);
         DB::table('control_taula')->insert($data);
         $respuestas = Respuesta::all();
@@ -139,7 +142,6 @@ class ForoController extends Controller
         foreach ($respuestas as $respuesta){ 
             $respuesta->delete();
             }
-        
         $tema->delete();
 
         return redirect('/foro');

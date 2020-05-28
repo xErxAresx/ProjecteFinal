@@ -24,7 +24,7 @@
           <tr>
             <td colspan="4">{{$respuesta->respuesta}}
             @if (Auth::check())
-            @if (Auth::user()->id == $respuesta->user_id)
+            @if (Auth::user()->id == 0)
             
             <button id="botonEditRespuesta" type="button" class="btn btn-warning" data-toggle="modal" data-target="#editRespuesta">
               Editar
@@ -104,7 +104,7 @@
                   <div>
                       <label for="synopsis">Antigua respuesta</label>
                   <textarea name="texto" id="texto" class="form-control" rows="3">
-                    
+
                   </textarea>
                   </div>
                    <div class="form-group">

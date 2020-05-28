@@ -63,6 +63,7 @@ class ForoController extends Controller
         $user->nombre = $request['nombre'];
         $user->nombreUsuario = $request['nombreUsuario'];
         $user->email = $request->input('email');
+        $user->email = $request->input('imagen');
         $user->save();
 
         return $this->getPerfil($id);

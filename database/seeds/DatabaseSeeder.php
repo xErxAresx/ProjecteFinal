@@ -149,6 +149,7 @@ class DatabaseSeeder extends Seeder
         $u->nombre = "Arnaldo";
         $u->nombreUsuario = "xErxAresx";
 		$u->email = "arnaulopez26@gmail.com";
+		$u->imagen = "https://i1.wp.com/impulsogeek.com/wp-content/uploads/2019/09/ver-la-segunda-temporada-de-one-punch-man-dd.jpg?resize=759%2C500&ssl=1";
 		$u->password = bcrypt("dawmola2");
 		$u->lvlAdmin = "2";
 		$u->save();

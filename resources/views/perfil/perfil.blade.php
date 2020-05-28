@@ -46,7 +46,7 @@
                           <label for="imagen" class="col-4 col-form-label">Imagen</label> 
                           <div class="col-4">
                           <img width="200" height="200" src="{{$user->imagen}}">
-                         
+                          <input id="email" name="email" placeholder="{{$user->imagen}}" class="form-control here" required="required" type="text" disabled>
                           </div>
                         </div>
                       @if (Auth::check() && Auth::user()->id == $user->id )

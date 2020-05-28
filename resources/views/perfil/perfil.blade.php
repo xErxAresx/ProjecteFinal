@@ -140,10 +140,12 @@
                 {this.state.animus.map(animu => {
                   //map es la funció igualitaria a foreach en React
                   //Mostrem l'informació que necessitem
+                  //Amb aquesta variable guardem la ruta del tema
+                  var rutaMostrar = "/foro/mostrar/"+animu.id;
                   return(
                     <tr>
                     <td key={`animu-${animu.id}`}>
-                      <a>{animu.titulo}</a>
+                      <a class="linksPerfil" href={rutaMostrar}>{animu.titulo}</a>
                     </td>
                     <td colspan="3">
                       {animu.texto}
@@ -198,7 +200,6 @@
       
                   </tr>
               </thead>
-      
               <tbody>
                   
                 {this.state.animus.map(animu => {
@@ -206,7 +207,7 @@
                   return(
                     <tr>
                     <td key={`animu-${animu.id}`}>
-                      <a href={rutaMostrar}>Link</a>
+                      <a class="linksPerfil" href={rutaMostrar}>Link</a>
                     </td>
                     <td colspan="3">
                       {animu.respuesta}
@@ -219,7 +220,6 @@
                                 
                         })}
               
-            
               </tbody>
           </table>
               

@@ -27,3 +27,17 @@ ul {
 li {
     list-style: none;
 }
+
+.linkTema {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.linkUser {
+    color: black;
+}
+
+.linksPerfil {
+    color: black;
+}

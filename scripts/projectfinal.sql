@@ -93,7 +93,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=276 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=390 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (257,'2020_05_17_143530_create_control_taula_table',2),(270,'2014_10_12_000000_create_users_table',3),(271,'2014_10_12_100000_create_password_resets_table',3),(272,'2019_08_19_000000_create_failed_jobs_table',3),(273,'2020_05_12_090823_create_temas_table',3),(274,'2020_05_14_131934_create_respuestas_table',3),(275,'2020_05_20_141638_create_control_taula_table',3);
+INSERT INTO `migrations` VALUES (257,'2020_05_17_143530_create_control_taula_table',2),(384,'2014_10_12_000000_create_users_table',3),(385,'2014_10_12_100000_create_password_resets_table',3),(386,'2019_08_19_000000_create_failed_jobs_table',3),(387,'2020_05_12_090823_create_temas_table',3),(388,'2020_05_14_131934_create_respuestas_table',3),(389,'2020_05_20_141638_create_control_taula_table',3);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +150,7 @@ CREATE TABLE `respuestas` (
   KEY `respuestas_tema_id_foreign` (`tema_id`),
   CONSTRAINT `respuestas_tema_id_foreign` FOREIGN KEY (`tema_id`) REFERENCES `temas` (`id`),
   CONSTRAINT `respuestas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `respuestas` (
 
 LOCK TABLES `respuestas` WRITE;
 /*!40000 ALTER TABLE `respuestas` DISABLE KEYS */;
-INSERT INTO `respuestas` VALUES (1,1,1,'Pos esta fino fino filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(2,1,1,'Pos EQUISDE DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(3,2,1,'Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(4,2,1,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(5,3,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(6,4,1,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06');
+INSERT INTO `respuestas` VALUES (1,1,1,'Pos esta fino fino filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(2,1,1,'Pos EQUISDE DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(3,2,1,'Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,2,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,3,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(6,3,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(7,4,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(8,2,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(9,1,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(10,1,5,'Prueba Respuesta 1','28-05-2020','2020-05-28 08:20:00','2020-05-28 08:20:00');
 /*!40000 ALTER TABLE `respuestas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `temas` (
   UNIQUE KEY `temas_titulo_unique` (`titulo`),
   KEY `temas_user_id_foreign` (`user_id`),
   CONSTRAINT `temas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -191,7 +191,7 @@ CREATE TABLE `temas` (
 
 LOCK TABLES `temas` WRITE;
 /*!40000 ALTER TABLE `temas` DISABLE KEYS */;
-INSERT INTO `temas` VALUES (1,'Mount and Blade',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(2,'Mount and Blade 2 lo peta22',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(3,'House flipper lo peta22',2,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06'),(4,'Nuevo DLC House Flipper',2,'Es la hostia no? que opinais?','13-05-2020','2020-05-21 14:38:06','2020-05-21 14:38:06');
+INSERT INTO `temas` VALUES (1,'Mount and Blade',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(2,'Mount and Blade 2 lo peta22',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(3,'House4124 flipper lo peta22',2,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,'Nuevo4123124 DLC House Flipper',2,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,'Nuevo4124124 DLC House Flipper',4,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(6,'Viejo DLC House Flipper',3,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(7,'Que paisha peña',4,'JEJEEEEEEEEEEEEEEEEEEEE','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(8,'Tema Prueba Selenium',5,'Tema Texto Prueba','28-05-2020','2020-05-28 08:20:05','2020-05-28 08:20:05');
 /*!40000 ALTER TABLE `temas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,7 +208,7 @@ CREATE TABLE `users` (
   `nombreUsuario` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lvlAdmin` int(11) NOT NULL,
+  `lvlAdmin` int(11) NOT NULL DEFAULT 1,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -216,7 +216,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_nombreusuario_unique` (`nombreUsuario`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +225,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Arnaldo','xErxAresx','arnaulopez26@gmail.com','$2y$10$FbpQufnOIB14zD/uXPKqruJuNecgBnKgbnxwJEYwqoW/svOBwbXkm',2,NULL,NULL,'2020-05-21 14:38:06','2020-05-21 14:38:06'),(2,'Noa','SuishBish','moavinyales@gmail.com','$2y$10$0G0Hg5oTTmGS3VEbR1Eql.Sw4Y5KswBFvqi.H3l.wToOifH7L576q',1,NULL,NULL,'2020-05-21 14:38:06','2020-05-21 14:38:06');
+INSERT INTO `users` VALUES (1,'Arnaldo','xErxAresx','arnaulopez26@gmail.com','$2y$10$y9sm7SXcFyShr25Oip5JweCadCaJFlja7dWlnyGkZUK3AAMIOJ5dW',2,NULL,NULL,'2020-05-28 08:19:29','2020-05-28 08:19:29'),(2,'Noa','SuishBish','noavinyales@gmail.com','$2y$10$h62sZH7CghFkkVO5P2S/ZO5Zc14wzdIoXgSYzeroczj4IXi.ESIKC',1,NULL,NULL,'2020-05-28 08:19:29','2020-05-28 08:19:29'),(3,'Dima','LemonBF','dmeters@gmail.com','$2y$10$I5h7y1XQbu1k6Ojdq5Lr4uV45rmZD1ktXvKWxyN6dlSSLLmAol9ve',1,NULL,NULL,'2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,'Hahaha','Jejeje','jajajas@gmail.com','$2y$10$vysHHGpsCNDYRS.ELPpgUOQR6r3j0FB7XQENWlzB4inNRRxeH.RNi',2,NULL,NULL,'2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,'Prueba1','Prueba1','prueba1@gmail.com','$2y$10$WfhSz.UNGayKDEHkUO5kg.641W847gYD2eW4Pvle/A0DPlqvg9i42',1,NULL,NULL,'2020-05-28 08:19:46','2020-05-28 08:19:46');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -238,4 +238,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-24 10:21:49
+-- Dump completed on 2020-05-28 12:58:26

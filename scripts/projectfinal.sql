@@ -93,7 +93,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=390 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=408 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (257,'2020_05_17_143530_create_control_taula_table',2),(384,'2014_10_12_000000_create_users_table',3),(385,'2014_10_12_100000_create_password_resets_table',3),(386,'2019_08_19_000000_create_failed_jobs_table',3),(387,'2020_05_12_090823_create_temas_table',3),(388,'2020_05_14_131934_create_respuestas_table',3),(389,'2020_05_20_141638_create_control_taula_table',3);
+INSERT INTO `migrations` VALUES (257,'2020_05_17_143530_create_control_taula_table',2),(402,'2014_10_12_000000_create_users_table',3),(403,'2014_10_12_100000_create_password_resets_table',3),(404,'2019_08_19_000000_create_failed_jobs_table',3),(405,'2020_05_12_090823_create_temas_table',3),(406,'2020_05_14_131934_create_respuestas_table',3),(407,'2020_05_20_141638_create_control_taula_table',3);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +150,7 @@ CREATE TABLE `respuestas` (
   KEY `respuestas_tema_id_foreign` (`tema_id`),
   CONSTRAINT `respuestas_tema_id_foreign` FOREIGN KEY (`tema_id`) REFERENCES `temas` (`id`),
   CONSTRAINT `respuestas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `respuestas` (
 
 LOCK TABLES `respuestas` WRITE;
 /*!40000 ALTER TABLE `respuestas` DISABLE KEYS */;
-INSERT INTO `respuestas` VALUES (1,1,1,'Pos esta fino fino filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(2,1,1,'Pos EQUISDE DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(3,2,1,'Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,2,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,3,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(6,3,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(7,4,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(8,2,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(9,1,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(10,1,5,'Prueba Respuesta 1','28-05-2020','2020-05-28 08:20:00','2020-05-28 08:20:00');
+INSERT INTO `respuestas` VALUES (1,1,1,'Pos esta fino fino filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(2,1,1,'Pos EQUISDE DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(3,2,1,'Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(4,2,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(5,3,2,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(6,3,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(7,4,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(8,2,3,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(9,1,4,'Pero que muchisimo mejor LOCO filipino loco','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56');
 /*!40000 ALTER TABLE `respuestas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `temas` (
   UNIQUE KEY `temas_titulo_unique` (`titulo`),
   KEY `temas_user_id_foreign` (`user_id`),
   CONSTRAINT `temas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -191,7 +191,7 @@ CREATE TABLE `temas` (
 
 LOCK TABLES `temas` WRITE;
 /*!40000 ALTER TABLE `temas` DISABLE KEYS */;
-INSERT INTO `temas` VALUES (1,'Mount and Blade',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(2,'Mount and Blade 2 lo peta22',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(3,'House4124 flipper lo peta22',2,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,'Nuevo4123124 DLC House Flipper',2,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,'Nuevo4124124 DLC House Flipper',4,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(6,'Viejo DLC House Flipper',3,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(7,'Que paisha peña',4,'JEJEEEEEEEEEEEEEEEEEEEE','13-05-2020','2020-05-28 08:19:30','2020-05-28 08:19:30'),(8,'Tema Prueba Selenium',5,'Tema Texto Prueba','28-05-2020','2020-05-28 08:20:05','2020-05-28 08:20:05');
+INSERT INTO `temas` VALUES (1,'Mount and Blade',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(2,'Mount and Blade 2 lo peta22',1,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(3,'House4124 flipper lo peta22',2,'Pues eso alguien sabe hasta que punto lo peta mount and blade 2?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(4,'Nuevo4123124 DLC House Flipper',2,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(5,'Nuevo4124124 DLC House Flipper',4,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(6,'Viejo DLC House Flipper',3,'Es la hostia no? que opinais?','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56'),(7,'Que paisha peña',4,'JEJEEEEEEEEEEEEEEEEEEEE','13-05-2020','2020-05-28 14:14:56','2020-05-28 14:14:56');
 /*!40000 ALTER TABLE `temas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,6 +209,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lvlAdmin` int(11) NOT NULL DEFAULT 1,
+  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -216,7 +217,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_nombreusuario_unique` (`nombreUsuario`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +226,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Arnaldo','xErxAresx','arnaulopez26@gmail.com','$2y$10$y9sm7SXcFyShr25Oip5JweCadCaJFlja7dWlnyGkZUK3AAMIOJ5dW',2,NULL,NULL,'2020-05-28 08:19:29','2020-05-28 08:19:29'),(2,'Noa','SuishBish','noavinyales@gmail.com','$2y$10$h62sZH7CghFkkVO5P2S/ZO5Zc14wzdIoXgSYzeroczj4IXi.ESIKC',1,NULL,NULL,'2020-05-28 08:19:29','2020-05-28 08:19:29'),(3,'Dima','LemonBF','dmeters@gmail.com','$2y$10$I5h7y1XQbu1k6Ojdq5Lr4uV45rmZD1ktXvKWxyN6dlSSLLmAol9ve',1,NULL,NULL,'2020-05-28 08:19:30','2020-05-28 08:19:30'),(4,'Hahaha','Jejeje','jajajas@gmail.com','$2y$10$vysHHGpsCNDYRS.ELPpgUOQR6r3j0FB7XQENWlzB4inNRRxeH.RNi',2,NULL,NULL,'2020-05-28 08:19:30','2020-05-28 08:19:30'),(5,'Prueba1','Prueba1','prueba1@gmail.com','$2y$10$WfhSz.UNGayKDEHkUO5kg.641W847gYD2eW4Pvle/A0DPlqvg9i42',1,NULL,NULL,'2020-05-28 08:19:46','2020-05-28 08:19:46');
+INSERT INTO `users` VALUES (1,'Arnaldo','xErxAresx','arnaulopez26@gmail.com','$2y$10$vAnAcOqztbTeOXjT08AR5eZUwlvDtO5Su.yf03aLQjDlniLeouLzq',2,'https://i1.wp.com/impulsogeek.com/wp-content/uploads/2019/09/ver-la-segunda-temporada-de-one-punch-man-dd.jpg?resize=759%2C500&ssl=1',NULL,NULL,'2020-05-28 14:14:56','2020-05-28 14:14:56'),(2,'Noa','SuishBish','noavinyales@gmail.com','$2y$10$CWAP7VBER1uwTJJKmjJYkebiCzTD7LHTmt2XQPvzODqqYZfUPwQBC',1,'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',NULL,NULL,'2020-05-28 14:14:56','2020-05-28 14:14:56'),(3,'Dima','LemonBF','dmeters@gmail.com','$2y$10$7vObOcpNeQk71qANzGopJ.s/JcvJl/ICh2CAe12RYUkr6DAbccOy2',1,'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',NULL,NULL,'2020-05-28 14:14:56','2020-05-28 14:14:56'),(4,'Hahaha','Jejeje','jajajas@gmail.com','$2y$10$b.bKRiqMFvVQdfxS59DulOf1a1sVX2BTTv3WqtegJlDekcy5c1NTu',2,'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',NULL,NULL,'2020-05-28 14:14:56','2020-05-28 14:14:56');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -238,4 +239,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 12:58:26
+-- Dump completed on 2020-05-28 19:09:59

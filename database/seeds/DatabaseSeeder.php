@@ -154,6 +154,15 @@ class DatabaseSeeder extends Seeder
 		$u->lvlAdmin = "2";
 		$u->save();
 
+		DB::table('users')->delete();
+		$u = new User;
+        $u->nombre = "admin";
+        $u->nombreUsuario = "admin";
+		$u->email = "admin@admin.com";
+		$u->password = bcrypt("admin1234");
+		$u->lvlAdmin = "2";
+		$u->save();
+
 		$u = new User;
         $u->nombre = "Noa";
         $u->nombreUsuario = "SuishBish";

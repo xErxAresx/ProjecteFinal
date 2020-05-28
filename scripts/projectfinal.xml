@@ -33,7 +33,7 @@
 		<field Field="migration" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="batch" Type="int(11)" Null="NO" Key="" Extra="" Comment="" />
 		<key Table="migrations" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="7" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="migrations" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="7" Avg_row_length="2340" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="390" Create_time="2020-05-09 15:06:16" Update_time="2020-05-28 10:19:29" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<options Name="migrations" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="7" Avg_row_length="2340" Data_length="16384" Max_data_length="0" Index_length="0" Data_free="0" Auto_increment="408" Create_time="2020-05-09 15:06:16" Update_time="2020-05-28 16:14:56" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="migrations">
 	<row>
@@ -42,32 +42,32 @@
 		<field name="batch">2</field>
 	</row>
 	<row>
-		<field name="id">384</field>
+		<field name="id">402</field>
 		<field name="migration">2014_10_12_000000_create_users_table</field>
 		<field name="batch">3</field>
 	</row>
 	<row>
-		<field name="id">385</field>
+		<field name="id">403</field>
 		<field name="migration">2014_10_12_100000_create_password_resets_table</field>
 		<field name="batch">3</field>
 	</row>
 	<row>
-		<field name="id">386</field>
+		<field name="id">404</field>
 		<field name="migration">2019_08_19_000000_create_failed_jobs_table</field>
 		<field name="batch">3</field>
 	</row>
 	<row>
-		<field name="id">387</field>
+		<field name="id">405</field>
 		<field name="migration">2020_05_12_090823_create_temas_table</field>
 		<field name="batch">3</field>
 	</row>
 	<row>
-		<field name="id">388</field>
+		<field name="id">406</field>
 		<field name="migration">2020_05_14_131934_create_respuestas_table</field>
 		<field name="batch">3</field>
 	</row>
 	<row>
-		<field name="id">389</field>
+		<field name="id">407</field>
 		<field name="migration">2020_05_20_141638_create_control_taula_table</field>
 		<field name="batch">3</field>
 	</row>
@@ -89,10 +89,10 @@
 		<field Field="fecha" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
 		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
-		<key Table="respuestas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="10" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="respuestas" Non_unique="1" Key_name="respuestas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="10" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="respuestas" Non_unique="1" Key_name="respuestas_tema_id_foreign" Seq_in_index="1" Column_name="tema_id" Collation="A" Cardinality="10" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="respuestas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="10" Avg_row_length="1638" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="11" Create_time="2020-05-20 14:23:52" Update_time="2020-05-28 10:20:00" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<key Table="respuestas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="9" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="respuestas" Non_unique="1" Key_name="respuestas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="9" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="respuestas" Non_unique="1" Key_name="respuestas_tema_id_foreign" Seq_in_index="1" Column_name="tema_id" Collation="A" Cardinality="9" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="respuestas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="9" Avg_row_length="1820" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="10" Create_time="2020-05-20 14:23:52" Update_time="2020-05-28 16:14:56" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="respuestas">
 	<row>
@@ -101,8 +101,8 @@
 		<field name="user_id">1</field>
 		<field name="respuesta">Pos esta fino fino filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">2</field>
@@ -110,8 +110,8 @@
 		<field name="user_id">1</field>
 		<field name="respuesta">Pos EQUISDE DE LA HOSTIA LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">3</field>
@@ -119,8 +119,8 @@
 		<field name="user_id">1</field>
 		<field name="respuesta">Este esta mucho mejor que el otro enserio DE LA HOSTIA LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">4</field>
@@ -128,8 +128,8 @@
 		<field name="user_id">2</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">5</field>
@@ -137,8 +137,8 @@
 		<field name="user_id">2</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">6</field>
@@ -146,8 +146,8 @@
 		<field name="user_id">4</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">7</field>
@@ -155,8 +155,8 @@
 		<field name="user_id">3</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">8</field>
@@ -164,8 +164,8 @@
 		<field name="user_id">3</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">9</field>
@@ -173,17 +173,8 @@
 		<field name="user_id">4</field>
 		<field name="respuesta">Pero que muchisimo mejor LOCO filipino loco</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
-	</row>
-	<row>
-		<field name="id">10</field>
-		<field name="tema_id">1</field>
-		<field name="user_id">5</field>
-		<field name="respuesta">Prueba Respuesta 1</field>
-		<field name="fecha">28-05-2020</field>
-		<field name="created_at">2020-05-28 08:20:00</field>
-		<field name="updated_at">2020-05-28 08:20:00</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	</table_data>
 	<table_structure name="temas">
@@ -194,10 +185,10 @@
 		<field Field="fecha" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
 		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
-		<key Table="temas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="8" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="temas" Non_unique="0" Key_name="temas_titulo_unique" Seq_in_index="1" Column_name="titulo" Collation="A" Cardinality="8" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="temas" Non_unique="1" Key_name="temas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="8" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="temas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="8" Avg_row_length="2048" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="9" Create_time="2020-05-20 14:23:52" Update_time="2020-05-28 10:20:05" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<key Table="temas" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="7" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="temas" Non_unique="0" Key_name="temas_titulo_unique" Seq_in_index="1" Column_name="titulo" Collation="A" Cardinality="7" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="temas" Non_unique="1" Key_name="temas_user_id_foreign" Seq_in_index="1" Column_name="user_id" Collation="A" Cardinality="7" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="temas" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="7" Avg_row_length="2340" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="8" Create_time="2020-05-20 14:23:52" Update_time="2020-05-28 16:14:56" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="temas">
 	<row>
@@ -206,8 +197,8 @@
 		<field name="user_id">1</field>
 		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">2</field>
@@ -215,8 +206,8 @@
 		<field name="user_id">1</field>
 		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">3</field>
@@ -224,8 +215,8 @@
 		<field name="user_id">2</field>
 		<field name="texto">Pues eso alguien sabe hasta que punto lo peta mount and blade 2?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">4</field>
@@ -233,8 +224,8 @@
 		<field name="user_id">2</field>
 		<field name="texto">Es la hostia no? que opinais?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">5</field>
@@ -242,8 +233,8 @@
 		<field name="user_id">4</field>
 		<field name="texto">Es la hostia no? que opinais?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">6</field>
@@ -251,8 +242,8 @@
 		<field name="user_id">3</field>
 		<field name="texto">Es la hostia no? que opinais?</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">7</field>
@@ -260,17 +251,8 @@
 		<field name="user_id">4</field>
 		<field name="texto">JEJEEEEEEEEEEEEEEEEEEEE</field>
 		<field name="fecha">13-05-2020</field>
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
-	</row>
-	<row>
-		<field name="id">8</field>
-		<field name="titulo">Tema Prueba Selenium</field>
-		<field name="user_id">5</field>
-		<field name="texto">Tema Texto Prueba</field>
-		<field name="fecha">28-05-2020</field>
-		<field name="created_at">2020-05-28 08:20:05</field>
-		<field name="updated_at">2020-05-28 08:20:05</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	</table_data>
 	<table_structure name="users">
@@ -280,14 +262,15 @@
 		<field Field="email" Type="varchar(255)" Null="NO" Key="UNI" Extra="" Comment="" />
 		<field Field="password" Type="varchar(255)" Null="NO" Key="" Extra="" Comment="" />
 		<field Field="lvlAdmin" Type="int(11)" Null="NO" Key="" Default="1" Extra="" Comment="" />
+		<field Field="imagen" Type="varchar(255)" Null="NO" Key="" Default="'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'" Extra="" Comment="" />
 		<field Field="email_verified_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
 		<field Field="remember_token" Type="varchar(100)" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
 		<field Field="created_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
 		<field Field="updated_at" Type="timestamp" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
-		<key Table="users" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="users" Non_unique="0" Key_name="users_nombreusuario_unique" Seq_in_index="1" Column_name="nombreUsuario" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<key Table="users" Non_unique="0" Key_name="users_email_unique" Seq_in_index="1" Column_name="email" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" />
-		<options Name="users" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="5" Avg_row_length="3276" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="6" Create_time="2020-05-12 08:35:39" Update_time="2020-05-28 10:19:46" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
+		<key Table="users" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="id" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="users" Non_unique="0" Key_name="users_nombreusuario_unique" Seq_in_index="1" Column_name="nombreUsuario" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<key Table="users" Non_unique="0" Key_name="users_email_unique" Seq_in_index="1" Column_name="email" Collation="A" Cardinality="4" Null="" Index_type="BTREE" Comment="" Index_comment="" />
+		<options Name="users" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="4" Avg_row_length="4096" Data_length="16384" Max_data_length="0" Index_length="32768" Data_free="0" Auto_increment="5" Create_time="2020-05-12 08:35:39" Update_time="2020-05-28 16:14:56" Collation="utf8mb4_unicode_ci" Create_options="" Comment="" Max_index_length="0" Temporary="N" />
 	</table_structure>
 	<table_data name="users">
 	<row>
@@ -295,60 +278,52 @@
 		<field name="nombre">Arnaldo</field>
 		<field name="nombreUsuario">xErxAresx</field>
 		<field name="email">arnaulopez26@gmail.com</field>
-		<field name="password">$2y$10$y9sm7SXcFyShr25Oip5JweCadCaJFlja7dWlnyGkZUK3AAMIOJ5dW</field>
+		<field name="password">$2y$10$vAnAcOqztbTeOXjT08AR5eZUwlvDtO5Su.yf03aLQjDlniLeouLzq</field>
 		<field name="lvlAdmin">2</field>
+		<field name="imagen">https://i1.wp.com/impulsogeek.com/wp-content/uploads/2019/09/ver-la-segunda-temporada-de-one-punch-man-dd.jpg?resize=759%2C500&amp;ssl=1</field>
 		<field name="email_verified_at" xsi:nil="true" />
 		<field name="remember_token" xsi:nil="true" />
-		<field name="created_at">2020-05-28 08:19:29</field>
-		<field name="updated_at">2020-05-28 08:19:29</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">2</field>
 		<field name="nombre">Noa</field>
 		<field name="nombreUsuario">SuishBish</field>
 		<field name="email">noavinyales@gmail.com</field>
-		<field name="password">$2y$10$h62sZH7CghFkkVO5P2S/ZO5Zc14wzdIoXgSYzeroczj4IXi.ESIKC</field>
+		<field name="password">$2y$10$CWAP7VBER1uwTJJKmjJYkebiCzTD7LHTmt2XQPvzODqqYZfUPwQBC</field>
 		<field name="lvlAdmin">1</field>
+		<field name="imagen">https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png</field>
 		<field name="email_verified_at" xsi:nil="true" />
 		<field name="remember_token" xsi:nil="true" />
-		<field name="created_at">2020-05-28 08:19:29</field>
-		<field name="updated_at">2020-05-28 08:19:29</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">3</field>
 		<field name="nombre">Dima</field>
 		<field name="nombreUsuario">LemonBF</field>
 		<field name="email">dmeters@gmail.com</field>
-		<field name="password">$2y$10$I5h7y1XQbu1k6Ojdq5Lr4uV45rmZD1ktXvKWxyN6dlSSLLmAol9ve</field>
+		<field name="password">$2y$10$7vObOcpNeQk71qANzGopJ.s/JcvJl/ICh2CAe12RYUkr6DAbccOy2</field>
 		<field name="lvlAdmin">1</field>
+		<field name="imagen">https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png</field>
 		<field name="email_verified_at" xsi:nil="true" />
 		<field name="remember_token" xsi:nil="true" />
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	<row>
 		<field name="id">4</field>
 		<field name="nombre">Hahaha</field>
 		<field name="nombreUsuario">Jejeje</field>
 		<field name="email">jajajas@gmail.com</field>
-		<field name="password">$2y$10$vysHHGpsCNDYRS.ELPpgUOQR6r3j0FB7XQENWlzB4inNRRxeH.RNi</field>
+		<field name="password">$2y$10$b.bKRiqMFvVQdfxS59DulOf1a1sVX2BTTv3WqtegJlDekcy5c1NTu</field>
 		<field name="lvlAdmin">2</field>
+		<field name="imagen">https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png</field>
 		<field name="email_verified_at" xsi:nil="true" />
 		<field name="remember_token" xsi:nil="true" />
-		<field name="created_at">2020-05-28 08:19:30</field>
-		<field name="updated_at">2020-05-28 08:19:30</field>
-	</row>
-	<row>
-		<field name="id">5</field>
-		<field name="nombre">Prueba1</field>
-		<field name="nombreUsuario">Prueba1</field>
-		<field name="email">prueba1@gmail.com</field>
-		<field name="password">$2y$10$WfhSz.UNGayKDEHkUO5kg.641W847gYD2eW4Pvle/A0DPlqvg9i42</field>
-		<field name="lvlAdmin">1</field>
-		<field name="email_verified_at" xsi:nil="true" />
-		<field name="remember_token" xsi:nil="true" />
-		<field name="created_at">2020-05-28 08:19:46</field>
-		<field name="updated_at">2020-05-28 08:19:46</field>
+		<field name="created_at">2020-05-28 14:14:56</field>
+		<field name="updated_at">2020-05-28 14:14:56</field>
 	</row>
 	</table_data>
 </database>

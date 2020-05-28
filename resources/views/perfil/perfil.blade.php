@@ -41,6 +41,14 @@
                         <input id="email" name="email" placeholder="{{$user->email}}" class="form-control here" required="required" type="text" disabled>
                         </div>
                       </div>
+
+                      <div class="form-group row">
+                          <label for="imagen" class="col-4 col-form-label">Imagen</label> 
+                          <div class="col-4">
+                          <img width="200" height="200" src="{{$user->imagen}}">
+                         
+                          </div>
+                        </div>
                       @if (Auth::check() && Auth::user()->id == $user->id )
                       <form method="get" action="{{ url('/foro/perfil/'.Auth::user()->id.'/edit') }}">
                         <div class="form-group row">

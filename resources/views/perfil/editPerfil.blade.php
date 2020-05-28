@@ -37,6 +37,13 @@
                           <input id="perfilEmail" id="email" name="email" class="form-control here" required="required" type="text" >
                         </div>
                       </div>
+
+                      <div class="form-group row">
+                          <label for="email" class="col-4 col-form-label">Imagen actual (URL: {{$user->imagen}}) (Para la imagen introducir una URL): <img width="200" height="200" src="{{$user->imagen}}"></label> 
+                          <div class="col-8">
+                              <input id="perfilImagen" id="imagen" name="imagen" class="form-control here" placeholder="{{$user->imagen}}" required="required" type="text" > 
+                          </div>
+                        </div>
                       
                       <div class="form-group row">
                         <div class="offset-4 col-8">

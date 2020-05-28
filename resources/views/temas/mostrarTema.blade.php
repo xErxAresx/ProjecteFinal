@@ -103,7 +103,11 @@
                 {{ csrf_field() }}
                   <div>
                       <label for="synopsis">Antigua respuesta</label>
-                  <textarea name="texto" id="texto" class="form-control" rows="3">{{$tema}}</textarea>
+                  <textarea name="texto" id="texto" class="form-control" rows="3">
+                    @if ()
+                      
+                    @endif
+                  </textarea>
                   </div>
                    <div class="form-group">
                       <label for="synopsis">Nueva respuesta</label>

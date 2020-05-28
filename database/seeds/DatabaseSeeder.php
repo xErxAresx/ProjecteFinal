@@ -154,7 +154,6 @@ class DatabaseSeeder extends Seeder
 		$u->lvlAdmin = "2";
 		$u->save();
 
-		DB::table('users')->delete();
 		$u = new User;
         $u->nombre = "admin";
         $u->nombreUsuario = "admin";

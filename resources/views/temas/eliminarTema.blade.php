@@ -14,21 +14,21 @@
                     </div>
                     <div class="form-group" >
                         <label for="synopsis" style="text-align: center;">Motivo de eliminacion</label>
-                        <ul>
+                        <ul >
                             <li>
-                                <input type="radio" id="Repetido" name="motivo" value="Repetido">El tema esta repetido
+                                <input type="radio" id="Repetido" name="motivo" value="Repetido" required>El tema esta repetido
                             </li>
                             <li>
-                                <input type="radio" id="Contenido Inadecutado" name="motivo" value="Contenido Inadecutado">El contenido no es adiente
+                                <input type="radio" id="Contenido Inadecutado" name="motivo" value="Contenido Inadecutado" required>El contenido no es adiente
                             </li>
                             <li>
-                                <input type="radio" id="Mal Vocabulario" name="motivo" value="Mal Vocabulario">Las palabras o expresiones utilizadas no son las correctas
+                                <input type="radio" id="Mal Vocabulario" name="motivo" value="Mal Vocabulario" required>Las palabras o expresiones utilizadas no son las correctas
                            </li>
                            <li>
-                                <input type="radio" id="Estupido" name="motivo" value="Estupido">El tema o pregunta es estupida
+                                <input type="radio" id="Estupido" name="motivo" value="Estupido" required>El tema o pregunta es estupida
                             </li>
                             <li>
-                                <input type="radio" id="Otro" name="motivo" value="Otro">Otro
+                                <input type="radio" id="Otro" name="motivo" value="Otro" required>Otro
                                 <textarea id="otroMotivo" name="otroMotivo"></textarea>
                             </li>
                       </ul>

@@ -17,12 +17,12 @@
             {{ csrf_field() }}
                <div class="form-group">
                   <label for="titulo">Título</label>
-                  <input id="tituloTema" type="text" name="titulo" id="title" class="form-control">
+                  <input id="tituloTema" type="text" name="titulo" id="title" class="form-control" required>
                </div>
 
                <div class="form-group">
                   <label for="synopsis">Texto</label>
-                  <textarea id="textoTema" name="texto" id="texto" class="form-control" rows="3"></textarea>
+                  <textarea id="textoTema" name="texto" id="texto" class="form-control" rows="3" required></textarea>
                </div>
 
                <div class="form-group">

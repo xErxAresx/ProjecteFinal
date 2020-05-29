@@ -16,7 +16,7 @@ class ForoController extends Controller
     //Funcion que retorna todos los temas del foro
     public function getIndex() 
     {
-        $temas=Tema::paginate(5);
+        $temas=Tema::orderBy('id', 'DESC')->paginate(5);
         $users=User::all();
         return view('home.foro', array('temas'=> $temas), array('users' => $users));
     }

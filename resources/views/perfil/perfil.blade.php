@@ -118,7 +118,7 @@
         }
         //Quan el component es munta fem una request a la api i agafem tots els temas de l'usuari
         componentDidMount() {
-            var myRequest = new Request("http://localhost:8000/api/temas/user/"+window.App.user.id); //La variable window.App.user.id es una variable global transformada a json
+            var myRequest = new Request("http://35.168.3.9/api/temas/user/"+window.App.user.id); //La variable window.App.user.id es una variable global transformada a json
             let animus = [];
             //Agafem tota la informació
             fetch(myRequest)
@@ -184,7 +184,7 @@
         }
 
         componentDidMount() {
-            var myRequest = new Request("http://localhost:8000/api/respuestas/user/"+window.App.user.id);
+            var myRequest = new Request("http://35.168.3.9/api/respuestas/user/"+window.App.user.id);
             let animus = [];
 
             fetch(myRequest)

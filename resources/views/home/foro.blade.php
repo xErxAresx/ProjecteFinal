@@ -14,7 +14,7 @@
                             <th class="textoTabla">Tema</th>
                             <th></th>
                             <th></th>
-                            <th class="autorfechaTabla">Fecha</th>
+                            <th class="autorfechaTabla">Autor y Fecha</th>
                         </tr>
                     </thead>
           
